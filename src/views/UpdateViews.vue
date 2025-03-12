@@ -10,7 +10,6 @@
           id="id"
           placeholder="ID"
           v-model="id"
-          :readonly="isReadOnly"
         />
       </div>
 
@@ -104,7 +103,6 @@ export default {
     const password = ref("");
     const email = ref("");
     const avatar = ref("");
-    const isReadOnly = ref(true); // กำหนดให้ฟิลด์ทั้งหมดเป็น read-only
 
     const fetchData = () => {
       fetch("https://www.melivecode.com/api/users/" + id.value)
@@ -154,8 +152,6 @@ export default {
         .catch((error) => console.error(error));
     };
 
-    onUpdate();
-
     return {
       id,
       fname,
@@ -165,10 +161,10 @@ export default {
       email,
       avatar,
       onUpdate,
-      isReadOnly, // ส่งค่าตัวแปร isReadOnly ไปใน template
     };
   },
 };
 </script>
 
 <style></style>
+
