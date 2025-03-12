@@ -85,12 +85,12 @@ export default {
 
   setup() {
     // ใช้ ref เพื่อเก็บค่า
-    const fname = ref("Cat1");
-    const lname = ref("Chat1");
-    const username = ref("cat1.chat@melivecode.com");
-    const password = ref("1234");
-    const email = ref("cat1.chat@melivecode.com");
-    const avatar = ref("https://www.melivecode.com/users/cat.png");
+    const fname = ref("");
+    const lname = ref("");
+    const username = ref("");
+    const password = ref("");
+    const email = ref("");
+    const avatar = ref("");
 
     // ฟังก์ชันสำหรับสร้างผู้ใช้ใหม่
     const createUser = async () => {
